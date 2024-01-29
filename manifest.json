@@ -1,0 +1,26 @@
+{
+    "manifest_version": 2,
+    "name": "Detective Racoon",
+    "version": "1.0",
+    "description": "Description of your extension",
+    "browser_action": {
+      "default_popup": "popup.html",
+      "default_icon": {
+        "16": "80cf8c4-31ea-4df2-a46f-598d7edef444.jpg"
+      }
+    },
+    "icons": {
+  
+    },
+    "background": {
+      "scripts": ["./src/background.js"],
+      "persistent": false
+    },
+    "content_scripts": [
+      {
+        "matches": ["<all_urls>"],
+        "js": ["./src/content.js"]
+      }
+    ]
+  }
+  
